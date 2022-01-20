@@ -1,0 +1,22 @@
+{
+  "name": "qa-coding-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephyBacelis/qa-coding-challenge.git"
+  },
+  "author": "Stephany Bacelis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StephyBacelis/qa-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/StephyBacelis/qa-coding-challenge#readme",
+  "devDependencies": {
+    "cypress": "^9.3.1"
+  }
+}
