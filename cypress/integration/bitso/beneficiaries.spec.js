@@ -13,13 +13,14 @@ describe('Scenario 2', () => {
             .type('Bacelis11.')
             .should('have.value', 'Bacelis11.');
 
-        cy.get('form').submit();
+        cy.get('form')
+            .submit();
 
-        cy.url().should('include', '/wallet');
+        cy.url()
+            .should('include', '/wallet');
     });
 
     it('Add Beneficiary', () => {
-        //cy.visit('https://devmalta.bitso.com/r/user/beneficiaries/add');
 
         cy.get('.moon-menu_lines')
             .click();
@@ -58,13 +59,15 @@ describe('Scenario 2', () => {
             .parent()
             .click();
 
-        cy.get('#react-select-3-option-2').click();
-        
+        // 3
+        cy.get('#react-select-3-option-2')
+            .click();
 
         cy.get('[name=month]')
             .parent()
             .click();
 
+        // Enero
         cy.get('#react-select-4-option-0')
             .click();
 
@@ -72,6 +75,7 @@ describe('Scenario 2', () => {
             .parent() 
             .click();
 
+        // 1990
         cy.get('#react-select-5-option-32')
             .click();
 
@@ -79,6 +83,7 @@ describe('Scenario 2', () => {
             .parent()
             .click();
          
+        // Conocido
         cy.get('#react-select-6-option-1')
             .click();
 
@@ -86,14 +91,11 @@ describe('Scenario 2', () => {
             .parent()
             .type('100');
 
-
         cy.get('form')
             .submit();
 
-
         cy.get('#pin')
             .type('4542');
-
 
         cy.contains('button', 'Confirmar')
             .click();

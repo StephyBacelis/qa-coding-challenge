@@ -12,9 +12,11 @@ describe('Scenario 1', () => {
             .type('Bacelis11.')
             .should('have.value', 'Bacelis11.');
 
-        cy.get('form').submit();
+        cy.get('form')
+            .submit();
 
-        cy.url().should('include', '/wallet');
+        cy.url()
+            .should('include', '/wallet');
     });
 
     it('Deposit BTC', () => {
@@ -37,15 +39,20 @@ describe('Scenario 1', () => {
             .first()
             .click();
 
-        cy.get('.modal-content').contains('¡Ups! Algo salió mal');
+        cy.get('.modal-content')
+            .contains('¡Ups! Algo salió mal');
     });
 
     it('Deposit ETH', () => {
         cy.contains('Monedas');
         cy.wait(1500);
 
-        cy.get('#eth').parent().click();
-        cy.contains('Depositar').click();
+        cy.get('#eth')
+            .parent()
+            .click();
+
+        cy.contains('Depositar')
+            .click();
 
         cy.contains('Depositar Ether');
 
@@ -55,15 +62,20 @@ describe('Scenario 1', () => {
             .first()
             .click();
 
-        cy.get('.modal-content').contains('¡Ups! Algo salió mal');
+        cy.get('.modal-content')
+            .contains('¡Ups! Algo salió mal');
     });
 
     it('Deposit BCH', () => {
         cy.contains('Monedas');
         cy.wait(1500);
         
-        cy.get('#bch').parent().click();
-        cy.contains('Depositar').click();
+        cy.get('#bch')
+            .parent()
+            .click();
+
+        cy.contains('Depositar')
+            .click();
 
         cy.contains('Depositar Bitcoin cash');
 
@@ -73,15 +85,20 @@ describe('Scenario 1', () => {
             .first()
             .click();
 
-        cy.get('.modal-content').contains('¡Ups! Algo salió mal');
+        cy.get('.modal-content')
+            .contains('¡Ups! Algo salió mal');
     });
 
     it('Deposit DAI', () => { 
         cy.contains('Monedas');
         cy.wait(1500);
         
-        cy.get('#dai').parent().click();
-        cy.contains('Depositar').click();
+        cy.get('#dai')
+            .parent()
+            .click();
+
+        cy.contains('Depositar')
+            .click();
 
         cy.contains('Depositar Dai');
 
@@ -91,15 +108,20 @@ describe('Scenario 1', () => {
             .first()
             .click();
 
-        cy.get('.modal-content').contains('¡Ups! Algo salió mal');
+        cy.get('.modal-content')
+            .contains('¡Ups! Algo salió mal');
     });
 
     it('Deposit XRP', () => {
         cy.contains('Monedas');
         cy.wait(1500);
         
-        cy.get('#xrp').parent().click();
-        cy.contains('Depositar').click();
+        cy.get('#xrp')
+            .parent()
+            .click();
+
+        cy.contains('Depositar')
+            .click();
 
         cy.contains('Depositar XRP');
 
@@ -109,15 +131,20 @@ describe('Scenario 1', () => {
             .first()
             .click();
 
-        cy.get('.modal-content').contains('¡Ups! Algo salió mal');
+        cy.get('.modal-content')
+            .contains('¡Ups! Algo salió mal');
     });
 
     it('Deposit MANA', () => { 
         cy.contains('Monedas');
         cy.wait(1500);
         
-        cy.get('#mana').parent().click();
-        cy.contains('Depositar').click();
+        cy.get('#mana')
+            .parent()
+            .click();
+
+        cy.contains('Depositar')
+            .click();
 
         cy.contains('Depositar MANA');
 
@@ -127,7 +154,8 @@ describe('Scenario 1', () => {
             .first()
             .click();
 
-        cy.get('.modal-content').contains('¡Ups! Algo salió mal');
+        cy.get('.modal-content')
+            .contains('¡Ups! Algo salió mal');
     });
     
 });
